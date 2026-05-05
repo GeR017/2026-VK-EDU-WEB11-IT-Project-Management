@@ -210,7 +210,55 @@ score, docs, dispute
 <img src="images/Снимок экрана 2026-05-05 161121.png" alt="Описание" width="1000" height="500">
 <img src="images/Снимок экрана 2026-05-05 161131.png" alt="Описание" width="1000" height="800">
 
+# API-проектирование
 
+#### Запрос на создание брони
+POST /api/v1/bookings
+
+{
+  "order_id": "ord_778899",
+  "carrier_id": "car_12345",
+  "vehicle_details": {
+    "type" : "B"
+    "vin": "XTA210700G1234567",
+    "model": "Geely Monjaro",
+    "year": 2024
+  },
+  "slots_requested": 1,
+  "payment_method": "card_token_abc123"
+}
+
+#### Ответ
+
+{
+  "booking_id": "book_990011",
+  "status": "pending_compliance",
+  "message": "Почти готово! Мы проверяем документы на авто и вот-вот вернёмся с ответом!;)",
+  "estimated_check_time_sec": 300
+}
+
+#### Запрос данных проверки
+
+GET /api/v1/bookings/book_990011/status
+
+#### Ответ
+
+{
+  "booking_id": "book_990011",
+  "status": "rejected",
+  "error_code": "LEGAL_RESTRICTIONS_FOUND",
+  "error_message": "Ох, кажется, у этой машины есть ограничения на регистрацию. Мы не можем рисковать вашей поездкой:(.",
+  "check_details": {
+    "is_stolen": true,
+    "is_pledged": false, 
+    "restriction_type": "угон"
+  },
+  "refund_status": "released"
+}
+
+## С4 контекст
+
+<img src="images/Снимок экрана 2026-05-05 174338.png" alt="Описание" width="800" height="500">
 
 
 
