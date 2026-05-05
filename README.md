@@ -206,9 +206,9 @@ score, docs, dispute
 
   
 # Фрейминг
-<img src="Copy of Lean Canvas by Ash Maurya (1).jpg" alt="Описание" width="1000" height="500">
-<img src="Copy of Lean Canvas by Ash Maurya (1).jpg" alt="Описание" width="1000" height="500">
-<img src="Copy of Lean Canvas by Ash Maurya (1).jpg" alt="Описание" width="1000" height="500">
+<img src="images/Снимок экрана 2026-05-05 154608.png" alt="Описание" width="1000" height="500">
+<img src="images/Снимок экрана 2026-05-05 161121.png" alt="Описание" width="1000" height="500">
+<img src="images/Снимок экрана 2026-05-05 161131.png" alt="Описание" width="1000" height="500">
 
 
 
